@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahesh Warpe | Software Developer & Full-Stack Engineer</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Mahesh Warpe, Software Developer & Full-Stack Engineer specializing in Java/Spring Boot 3, Next.js, and MERN stack. Auto-synced with GitHub with architectural depth analysis.">
+  <meta name="keywords" content="Mahesh Warpe, Software Developer, Full-Stack Engineer, Java, Spring Boot, React, Next.js, TypeScript, MERN, Pune, GitHub Projects">
+  <meta name="author" content="Mahesh Warpe">
+
+  <!-- OpenGraph / Social Meta Tags -->
+  <meta property="og:title" content="Mahesh Warpe | Software Developer & Full-Stack Engineer">
+  <meta property="og:description" content="Explore production-grade SaaS ERPs, real-time marketplaces, and live-synced GitHub repositories built by Mahesh Warpe.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/Mahesh930">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'><rect width='24' height='24' rx='6' fill='%230f1422'/><text x='12' y='17' font-family='sans-serif' font-size='12' font-weight='800' fill='%2338bdf8' text-anchor='middle'>MW</text></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <div class="brand-badge">MW</div>
+        <div class="brand-title">
+          <span>Mahesh Warpe</span>
+          <span>FULL-STACK DEVELOPER</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#flagship" class="nav-link">Projects</a></li>
+        <li><a href="#github-work" class="nav-link">Repositories</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="live-sync-pill" id="nav-sync-pill">
+          <span class="pulse-dot"></span>
+          GitHub Synced
+        </div>
+        <button class="btn btn-primary btn-sm btn-open-resume">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          View Resume
+        </button>
+        <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="status-pill">
+            <span class="pulse-dot"></span>
+            <span id="status-text">Available for Full-Time Software Engineering Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span id="hero-name" class="gradient-text">Mahesh Warpe</span>.<br>
+            <span id="hero-title-text">Software Developer</span>
+          </h1>
+
+          <p class="hero-subtitle" id="hero-summary">
+            Computer Engineering graduate building production-style applications across Java/Spring Boot and the MERN stack. Specialized in multi-tenant SaaS ERPs, high-throughput backend APIs, and real-time marketplaces.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#github-work" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="6" y1="3" x2="6" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg>
+              Explore Live GitHub Work
+            </a>
+            <button class="btn btn-secondary btn-open-resume">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+              View Resume
+            </button>
+            <a href="#contact" class="btn btn-outline">
+              Get In Touch
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/Mahesh930" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span>github.com/Mahesh930</span>
+            </a>
+            <a href="https://linkedin.com/in/mahesh-warpe-129605255" target="_blank" rel="noopener noreferrer" class="social-link">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <span>LinkedIn Profile</span>
+            </a>
+            <a href="mailto:warpemahesh356@gmail.com" class="social-link">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>warpemahesh356@gmail.com</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cyber Terminal Visual -->
+        <div class="hero-visual">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+              </div>
+              <span class="terminal-title">bash — mahesh@developer:~$</span>
+            </div>
+
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span class="terminal-prompt">$ </span>
+                <span class="terminal-cmd">curl -s https://api.github.com/users/Mahesh930 | jq</span>
+                <div class="terminal-out">
+                  {<br>
+                  &nbsp;&nbsp;<span class="hl-prop">"engineer"</span>: <span class="hl-val">"Mahesh Vishnu Warpe"</span>,<br>
+                  &nbsp;&nbsp;<span class="hl-prop">"role"</span>: <span class="hl-val">"Full-Stack / Software Developer"</span>,<br>
+                  &nbsp;&nbsp;<span class="hl-prop">"location"</span>: <span class="hl-val">"Pune, Maharashtra, India"</span>,<br>
+                  &nbsp;&nbsp;<span class="hl-prop">"education"</span>: <span class="hl-val">"B.E. Computer Engineering (SPPU)"</span>,<br>
+                  &nbsp;&nbsp;<span class="hl-prop">"specialization"</span>: [<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="hl-arr">"Spring Boot 3"</span>, <span class="hl-arr">"Java 17"</span>, <span class="hl-arr">"Next.js"</span>,<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;<span class="hl-arr">"MERN Stack"</span>, <span class="hl-arr">"PostgreSQL"</span>, <span class="hl-arr">"Socket.io"</span><br>
+                  &nbsp;&nbsp;],<br>
+                  &nbsp;&nbsp;<span class="hl-prop">"public_repos"</span>: <span class="hl-val">17</span>,<br>
+                  &nbsp;&nbsp;<span class="hl-prop">"problem_solving"</span>: <span class="hl-val">"5-Star HackerRank • 400+ Solved"</span><br>
+                  }
+                </div>
+              </div>
+
+              <div class="terminal-line" style="margin-bottom:0;">
+                <span class="terminal-prompt">$ </span>
+                <span class="terminal-cmd">git status --portfolio</span>
+                <div class="terminal-out" style="color:var(--accent-emerald);">
+                  ✔ GitHub live sync active. Automatically discovers all repositories.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Counter Strip -->
+      <div class="metrics-strip" id="hero-metrics-container">
+        <!-- Injected via JavaScript from data.js -->
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Engineering Profile</span>
+        <h2 class="section-title">About Mahesh Warpe</h2>
+        <p class="section-desc">Passionate full-stack developer dedicated to writing clean, maintainable, and high-throughput software systems.</p>
+      </div>
+
+      <div class="about-card">
+        <div class="about-grid">
+          <div class="about-content">
+            <h3 style="font-size:1.5rem; font-weight:700; margin-bottom:14px; color:var(--text-primary);">
+              Transforming complex business logic into rock-solid software architecture.
+            </h3>
+            <p style="color:var(--text-secondary); font-size:0.98rem; line-height:1.75; margin-bottom:16px;">
+              I am a Computer Engineering graduate from <strong>Savitribai Phule Pune University</strong> with extensive hands-on experience building production-grade web applications. My development ethos revolves around architectural scalability, transactional safety, and responsive user experiences.
+            </p>
+            <p style="color:var(--text-secondary); font-size:0.98rem; line-height:1.75; margin-bottom:20px;">
+              During my Web Operations Internship at <strong>TechGeekConnect Technologies</strong>, I engineered production modules for vehicle rentals and strengthened platform integrity through bot-filtering and robust authentication. Whether it is eliminating <strong>N+1 queries</strong> in Spring Boot using <code>JPQL JOIN FETCH</code> or preventing race conditions in MongoDB via <strong>Mongoose transactions</strong>, I focus deeply on the engineering fundamentals that make software reliable.
+            </p>
+            <div style="display:flex; flex-wrap:wrap; gap:12px;">
+              <span class="badge badge-saas">Multi-Tenant Architectures</span>
+              <span class="badge badge-realtime">WebSocket Real-Time Systems</span>
+              <span class="badge badge-backend">Stateless JWT & OAuth2 Security</span>
+              <span class="badge badge-ai">Geospatial GIS Integrations</span>
+            </div>
+          </div>
+
+          <div class="about-facts">
+            <h4 style="font-size:1rem; font-weight:700; margin-bottom:16px; color:var(--accent-cyan); font-family:var(--font-mono);">
+              // Quick Facts
+            </h4>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:12px; font-size:0.9rem;">
+              <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                <span style="color:var(--text-muted);">Current Base:</span>
+                <strong>Pune, Maharashtra, India</strong>
+              </li>
+              <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                <span style="color:var(--text-muted);">Degree:</span>
+                <strong>B.E. Computer Engineering</strong>
+              </li>
+              <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                <span style="color:var(--text-muted);">Primary Stack:</span>
+                <strong style="color:var(--accent-indigo);">Spring Boot 3 + MERN</strong>
+              </li>
+              <li style="display:flex; justify-content:space-between; border-bottom:1px solid var(--border-subtle); padding-bottom:8px;">
+                <span style="color:var(--text-muted);">GitHub Activity:</span>
+                <strong style="color:var(--accent-emerald);">17+ Repositories</strong>
+              </li>
+              <li style="display:flex; justify-content:space-between;">
+                <span style="color:var(--text-muted);">Problem Solving:</span>
+                <strong style="color:#fbbf24;">5-Star Gold HackerRank</strong>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Matrix Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Competence</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-desc">Comprehensive toolset spanning frontend engineering, scalable backend services, databases, and DevOps.</p>
+      </div>
+
+      <div class="skills-grid" id="skills-container">
+        <!-- Injected via JavaScript from data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Flagship Showcase Projects -->
+  <section class="section" id="flagship">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Flagship Engineering</span>
+        <h2 class="section-title">Featured Production & SaaS Projects</h2>
+        <p class="section-desc">Architecturally sophisticated applications built with enterprise multi-tenancy, real-time sync, and distributed design patterns.</p>
+      </div>
+
+      <div class="flagship-grid" id="flagship-container">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic GitHub Explorer Section -->
+  <section class="section" id="github-work">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">GitHub Live Repository Stream</span>
+        <h2 class="section-title">Dynamic GitHub Work & Open Source</h2>
+        <p class="section-desc">
+          Directly aligned with <a href="https://github.com/Mahesh930" target="_blank" style="color:var(--accent-cyan); text-decoration:underline;">GitHub (@Mahesh930)</a>. Any newly created repository is automatically categorized by language, architectural depth, and complexity score.
+        </p>
+      </div>
+
+      <div class="github-explorer-panel">
+        <div class="explorer-controls">
+          <!-- Top Bar: Search & Sync Indicator -->
+          <div class="explorer-top-bar">
+            <div class="search-box-wrap">
+              <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="repo-search-input" class="search-input" placeholder="Search by name, technology, or architectural pattern (e.g. 'hospital', 'socket', 'mern')...">
+            </div>
+
+            <div class="sync-status-group">
+              <div class="sync-info">
+                <span class="count-highlight" id="repo-count-badge">17 Repositories</span>
+                <span id="sync-status-text">Connecting to GitHub API...</span>
+              </div>
+              <button class="btn-refresh" id="btn-refresh-github" title="Refresh live from GitHub">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                Sync GitHub
+              </button>
+            </div>
+          </div>
+
+          <!-- Filter Pills: Languages -->
+          <div class="filter-row">
+            <span class="filter-label">Language:</span>
+            <button class="filter-pill active" data-filter-lang="all">All Languages</button>
+            <button class="filter-pill" data-filter-lang="typescript">TypeScript</button>
+            <button class="filter-pill" data-filter-lang="javascript">JavaScript</button>
+            <button class="filter-pill" data-filter-lang="java">Java</button>
+            <button class="filter-pill" data-filter-lang="web">HTML / CSS</button>
+          </div>
+
+          <!-- Filter Pills: Complexity Tier -->
+          <div class="filter-row">
+            <span class="filter-label">Complexity:</span>
+            <button class="filter-pill active" data-filter-tier="all">All Tiers</button>
+            <button class="filter-pill" data-filter-tier="tier1">Tier 1: Enterprise SaaS (90%+)</button>
+            <button class="filter-pill" data-filter-tier="tier2">Tier 2: Full-Stack App (80-89%)</button>
+            <button class="filter-pill" data-filter-tier="tier3">Tier 3: Backend API (70-79%)</button>
+            <button class="filter-pill" data-filter-tier="tier4">Tier 4: UI & Tools (&lt;70%)</button>
+
+            <!-- Sort selector -->
+            <select class="sort-select" id="repo-sort-select">
+              <option value="depth">Sort: Complexity Depth Score</option>
+              <option value="recent">Sort: Most Recently Pushed</option>
+              <option value="stars">Sort: Activity & Stars</option>
+              <option value="name">Sort: Alphabetical (A-Z)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Repositories Grid Container -->
+        <div class="repos-grid" id="repos-grid">
+          <!-- Dynamically populated by GitHubService & app.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience & Education Section -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Career Background</span>
+        <h2 class="section-title">Experience & Education</h2>
+        <p class="section-desc">Practical industry software engineering experience backed by rigorous academic computer engineering foundation.</p>
+      </div>
+
+      <div class="timeline-wrap">
+        <!-- Experience Column -->
+        <div class="timeline-column">
+          <div class="column-title-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--accent-cyan);"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+            <h3 class="column-title">Work Experience</h3>
+          </div>
+          <div class="timeline-items" id="experience-timeline">
+            <!-- Injected via JavaScript -->
+          </div>
+        </div>
+
+        <!-- Education Column -->
+        <div class="timeline-column" id="education">
+          <div class="column-title-wrap">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--accent-indigo);"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+            <h3 class="column-title">Academic Education</h3>
+          </div>
+          <div class="timeline-items" id="education-timeline">
+            <!-- Injected via JavaScript -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievements Cards -->
+      <div class="achievements-grid" id="achievements-container">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Connect & Collaborate</h2>
+        <p class="section-desc">I am actively open to full-time Software Developer, SDE, and Full-Stack Engineering roles. Feel free to reach out directly!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Cards Panel -->
+        <div class="contact-info-panel">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div>
+              <span class="contact-label">Email Address</span>
+              <a href="mailto:warpemahesh356@gmail.com" class="contact-value" style="display:block;">warpemahesh356@gmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div>
+              <span class="contact-label">Phone & WhatsApp</span>
+              <a href="tel:+917083235728" class="contact-value" style="display:block;">+91-7083235728</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </div>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/mahesh-warpe-129605255" target="_blank" rel="noopener noreferrer" class="contact-value" style="display:block;">in/mahesh-warpe-129605255</a>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Pune, Maharashtra, India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Message Form Panel -->
+        <div class="contact-form-panel">
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Your Full Name *</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Your Work Email *</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" class="form-input" placeholder="Role Discussion / Project Collaboration">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Message *</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Describe the role or message you'd like to share..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div class="brand-badge" style="width:36px; height:36px; font-size:0.9rem;">MW</div>
+          <div>
+            <div style="font-weight:700;">Mahesh Warpe</div>
+            <div style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">Software Developer • Pune, India</div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:20px; font-size:0.86rem; color:var(--text-secondary);">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#flagship">Flagship SaaS</a>
+          <a href="#github-work">GitHub Repos</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        <span>© 2026 Mahesh Warpe. Engineered with high-performance Vanilla Web Technologies & Live GitHub Sync.</span>
+        <a href="#hero" style="color:var(--accent-cyan); display:flex; align-items:center; gap:4px;">
+          Back to Top ↑
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Architecture Modal -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Project Architecture Deep Dive</h3>
+        <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-content-body" id="project-modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Resume Modal -->
+  <div class="modal-overlay" id="resume-modal">
+    <div class="modal-container" style="max-width: 920px;">
+      <div class="modal-header">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <h3 class="modal-title">Resume — Mahesh Warpe</h3>
+          <button class="btn btn-secondary btn-sm" id="btn-print-resume">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Print / Save PDF
+          </button>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      </div>
+      <div class="modal-content-body" id="resume-modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/data.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

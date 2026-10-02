@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+  body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    overflow-x: hidden;
+  }
+}
+
+/* Standard Clean Ambient Light Mesh with Blue Accent */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 10% 12%, rgba(37, 99, 235, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 90% 20%, rgba(2, 132, 199, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(59, 130, 246, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Clean Light Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Reusable Light Card & Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.04);
+}
+
+.glass-panel:hover {
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 14px 30px -4px rgba(37, 99, 235, 0.09), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+}
+
+/* Interactive Card In-App Animations (applied on hover/interaction, not page reload) */
+.card-interactive {
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+.card-interactive:hover {
+  transform: translateY(-4px);
+}
+
+/* Standard Industry Blue Buttons & Interactive Classes */
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 4px 14px -1px rgba(37, 99, 235, 0.35);
+  transform: translateY(-1.5px);
+}
+.btn-primary:active {
+  background-color: #1e40af;
+  transform: translateY(0px) scale(0.98);
+}
+
+.btn-secondary {
+  background-color: #ffffff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-secondary:hover {
+  background-color: #f8fafc;
+  color: #2563eb;
+  border-color: #93c5fd;
+  transform: translateY(-1.5px);
+}
+.btn-secondary:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Interactive Button Micro-animation */
+.btn-interactive {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-interactive:hover {
+  transform: translateY(-2px);
+}
+.btn-interactive:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Crisp Text Gradients with Industry Standard Blue */
+.text-gradient {
+  background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #0284c7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-primary {
+  background: linear-gradient(135deg, #0f172a 40%, #334155 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Terminal Cursor Blink */
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background-color: #60a5fa;
+  animation: cursorBlink 1s step-end infinite;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Scroll-triggered reveal animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animated skill progress bar */
+.skill-bar-fill {
+  width: 0%;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.skill-bar-fill.animated {
+  /* width is set via inline style */
+}
+
+/* Mobile menu slide transition */
+.mobile-menu-enter {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease-out;
+}
+.mobile-menu-enter.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Hide scrollbar for filter pills on mobile */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+/* Print Styles for Resume Modal */
+@media print {
+  /* Hide everything except the resume content */
+  body > * {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    overflow: visible !important;
+  }
+
+  /* Show the root and modal */
+  #root {
+    display: block !important;
+  }
+
+  .print-resume-container {
+    position: static !important;
+    background: white !important;
+    backdrop-filter: none !important;
+    padding: 0 !important;
+    inset: auto !important;
+    z-index: auto !important;
+  }
+
+  .print-resume-inner {
+    max-height: none !important;
+    overflow: visible !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .print-hide {
+    display: none !important;
+  }
+
+  .print-resume-body {
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  /* Reset page margins */
+  @page {
+    margin: 0.5in;
+    size: A4;
+  }
+}
