@@ -86,7 +86,7 @@ export default function ResumeModal({ isOpen, onClose }) {
             <h3 className="font-bold text-lg text-slate-900">Resume — {personal.name}</h3>
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-xs font-semibold shadow-sm active:scale-95 transition-all"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold active:scale-95 transition-all"
             >
               <Printer className="w-3.5 h-3.5 text-white" />
               <span>Print / Save PDF</span>
@@ -105,11 +105,18 @@ export default function ResumeModal({ isOpen, onClose }) {
         {/* Modal Body / Printable Resume */}
         <div className="p-6 sm:p-10 overflow-y-auto bg-white text-slate-900 font-sans leading-relaxed selection:bg-slate-200 print-resume-body">
           <header className="text-center border-b-2 border-slate-900 pb-3 mb-5">
+            <img
+              src={personal.avatarUrl}
+              alt=""
+              width={72}
+              height={72}
+              className="w-16 h-16 sm:w-[72px] sm:h-[72px] rounded-full object-cover object-top mx-auto mb-3 ring-2 ring-slate-200 print:ring-0"
+            />
             <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight uppercase">
               {personal.name}
             </h1>
             <div className="text-xs sm:text-sm font-semibold text-slate-600 mt-1">
-              • Software Developer •
+              Full-Stack Developer
             </div>
             <div className="flex flex-wrap items-center justify-center gap-2 text-xs text-slate-600 mt-2 font-mono">
               <span>{personal.location}</span>

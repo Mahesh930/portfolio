@@ -1,88 +1,107 @@
 import React from 'react';
-import { UserCheck, ShieldCheck, Zap, Server } from 'lucide-react';
+import { Server, Zap, ShieldCheck, Database } from 'lucide-react';
+import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export default function About() {
+  const { personal } = PORTFOLIO_DATA;
+
   const highlights = [
-    { title: "Multi-Tenant Architectures", icon: Server, color: "text-blue-600" },
-    { title: "WebSocket Real-Time Systems", icon: Zap, color: "text-blue-600" },
-    { title: "Stateless JWT & RBAC Security", icon: ShieldCheck, color: "text-blue-600" },
-    { title: "Database Query Optimizations", icon: UserCheck, color: "text-blue-600" },
+    { title: "Multi-tenant architectures", icon: Server },
+    { title: "Real-time WebSocket systems", icon: Zap },
+    { title: "JWT & RBAC security", icon: ShieldCheck },
+    { title: "Query optimization", icon: Database },
   ];
 
   return (
-    <section id="about" className="py-20 relative">
+    <section id="about" className="py-20 sm:py-24 relative">
       <div className="max-w-layout mx-auto px-4 sm:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-mono text-xs uppercase tracking-wider mb-3 shadow-xs">
-            Engineering Profile
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-            About Mahesh Warpe
+        <div className="max-w-2xl mb-12 sm:mb-14">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700 mb-3">
+            About
+          </p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+            Engineer focused on reliable, scalable software
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-2">
-            Passionate full-stack developer dedicated to writing clean, maintainable, and high-throughput software systems.
+          <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+            Clean architecture, transactional safety, and interfaces people actually enjoy using.
           </p>
         </div>
 
-        <div className="rounded-3xl glass-panel p-6 sm:p-10 card-interactive">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Story */}
-            <div className="lg:col-span-7 space-y-4">
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
-                Transforming complex business logic into rock-solid software architecture.
-              </h3>
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                I am a Computer Engineering graduate from <strong className="text-slate-900">Savitribai Phule Pune University</strong> with extensive hands-on experience building production-grade web applications. My development ethos revolves around architectural scalability, transactional safety, and responsive user experiences.
-              </p>
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                During my Web Operations Internship at <strong className="text-blue-600">TechGeekConnect Technologies</strong>, I engineered production modules for vehicle rentals and strengthened platform integrity through bot-filtering and robust authentication. Whether it is eliminating <strong className="text-slate-900">N+1 queries</strong> in Spring Boot using <code className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-800 border border-slate-200 font-mono text-xs">JPQL JOIN FETCH</code> or preventing race conditions in MongoDB via <strong className="text-slate-900">Mongoose transactions</strong>, I focus deeply on the engineering fundamentals that make software reliable.
-              </p>
-
-              <div className="flex flex-wrap gap-2.5 pt-2">
-                {highlights.map((item) => {
-                  const Icon = item.icon;
-                  return (
-                    <span 
-                      key={item.title}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200/90 text-xs font-semibold text-slate-700 shadow-xs hover:border-blue-400 hover:text-blue-700 hover:bg-white hover:-translate-y-0.5 transition-all cursor-default"
-                    >
-                      <Icon className={`w-3.5 h-3.5 ${item.color}`} />
-                      <span>{item.title}</span>
-                    </span>
-                  );
-                })}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+          <div className="lg:col-span-4 flex justify-center lg:justify-start">
+            <div className="relative w-full max-w-xs">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden border border-slate-200 shadow-lg shadow-slate-900/10">
+                <img
+                  src={personal.avatarUrl}
+                  alt={personal.name}
+                  width={400}
+                  height={500}
+                  className="w-full h-full object-cover object-top"
+                  loading="lazy"
+                />
+              </div>
+              <div className="mt-4 space-y-1 text-center lg:text-left">
+                <p className="font-display font-bold text-lg text-slate-900">{personal.name}</p>
+                <p className="text-sm text-slate-500">{personal.role} · {personal.location}</p>
               </div>
             </div>
+          </div>
 
-            {/* Quick Facts Sidebar */}
-            <div className="lg:col-span-5 bg-slate-50/80 border border-slate-200 rounded-2xl p-5 sm:p-8 space-y-4 shadow-xs">
-              <div className="text-xs font-mono font-bold uppercase tracking-wider text-blue-700 border-b border-slate-200 pb-3">
-                // Quick Engineering Facts
-              </div>
-
-              <ul className="space-y-3.5 text-xs sm:text-sm">
-                <li className="flex items-center justify-between border-b border-slate-200/60 pb-2.5">
-                  <span className="text-slate-500">Current Base:</span>
-                  <strong className="text-slate-900">Pune, Maharashtra, India</strong>
-                </li>
-                <li className="flex items-center justify-between border-b border-slate-200/60 pb-2.5">
-                  <span className="text-slate-500">Degree:</span>
-                  <strong className="text-slate-900">B.E. Computer Engineering</strong>
-                </li>
-                <li className="flex items-center justify-between border-b border-slate-200/60 pb-2.5">
-                  <span className="text-slate-500">Core Ecosystem:</span>
-                  <strong className="text-blue-600">Spring Boot 3 + MERN Stack</strong>
-                </li>
-                <li className="flex items-center justify-between border-b border-slate-200/60 pb-2.5">
-                  <span className="text-slate-500">GitHub Activity:</span>
-                  <strong className="text-blue-700 font-semibold">17+ Live Public Repos</strong>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span className="text-slate-500">Algorithmic Problem Solving:</span>
-                  <strong className="text-blue-700 font-semibold">5-Star Gold HackerRank (400+)</strong>
-                </li>
-              </ul>
+          <div className="lg:col-span-8 space-y-6">
+            <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+              <p>
+                I am a Computer Engineering graduate from{' '}
+                <strong className="text-slate-900 font-semibold">Savitribai Phule Pune University</strong>{' '}
+                with hands-on experience shipping production-style web applications across the MERN stack
+                and Java/Spring Boot — including multi-tenant SaaS and real-time marketplaces.
+              </p>
+              <p>
+                During my Web Operations internship at{' '}
+                <strong className="text-sky-800 font-semibold">TechGeekConnect Technologies</strong>, I
+                built production modules for vehicle rentals and hardened auth against bots and spam.
+                Day to day I care about fundamentals: eliminating N+1 queries with{' '}
+                <code className="px-1.5 py-0.5 rounded bg-slate-100 text-slate-800 border border-slate-200 font-mono text-xs">
+                  JPQL JOIN FETCH
+                </code>
+                , preventing race conditions with Mongoose transactions, and keeping APIs secure and predictable.
+              </p>
             </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              {highlights.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={item.title}
+                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white border border-slate-200/90 hover:border-sky-300 transition-colors"
+                  >
+                    <div className="w-9 h-9 rounded-lg bg-slate-900 text-white flex items-center justify-center shrink-0">
+                      <Icon className="w-4 h-4" />
+                    </div>
+                    <span className="text-sm font-semibold text-slate-800">{item.title}</span>
+                  </div>
+                );
+              })}
+            </div>
+
+            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3 pt-4 border-t border-slate-200 text-sm">
+              <div className="flex justify-between gap-4 sm:block sm:space-y-0.5">
+                <dt className="text-slate-500">Degree</dt>
+                <dd className="font-semibold text-slate-900">B.E. Computer Engineering</dd>
+              </div>
+              <div className="flex justify-between gap-4 sm:block sm:space-y-0.5">
+                <dt className="text-slate-500">Stack focus</dt>
+                <dd className="font-semibold text-slate-900">Spring Boot 3 + MERN</dd>
+              </div>
+              <div className="flex justify-between gap-4 sm:block sm:space-y-0.5">
+                <dt className="text-slate-500">Problem solving</dt>
+                <dd className="font-semibold text-slate-900">5★ HackerRank · 400+ solved</dd>
+              </div>
+              <div className="flex justify-between gap-4 sm:block sm:space-y-0.5">
+                <dt className="text-slate-500">Open to</dt>
+                <dd className="font-semibold text-slate-900">Full-time SDE roles</dd>
+              </div>
+            </dl>
           </div>
         </div>
       </div>

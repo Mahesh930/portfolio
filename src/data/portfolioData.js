@@ -9,6 +9,7 @@ export const PORTFOLIO_DATA = {
     githubUsername: "Mahesh930",
     githubUrl: "https://github.com/Mahesh930",
     linkedinUrl: "https://linkedin.com/in/mahesh-warpe-129605255",
+    avatarUrl: "/images/profile.jpg",
     openToWork: true,
     statusText: "Available for Full-Time Software Engineering & SDE Roles",
     summary: `Computer Engineering graduate and full-stack developer with hands-on experience building production-style applications across the MERN stack and Java/Spring Boot, including a multi-tenant SaaS ERP platform and a multi-role marketplace with real-time tracking, secure authentication, and automated testing. Completed a Web Operations internship at TechGeekConnect Technologies. Proficient in React.js, Next.js, Node.js, Express.js, Spring Boot, MongoDB, and PostgreSQL, with a strong foundation in JavaScript, TypeScript, OOP, and DBMS. Solved 400+ coding problems and focused on building reliable, scalable web applications that solve real user problems.`

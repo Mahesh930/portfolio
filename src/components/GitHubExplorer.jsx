@@ -95,15 +95,19 @@ export default function GitHubExplorer({
   return (
     <section id="github-work" className="py-20 relative">
       <div className="max-w-layout mx-auto px-4 sm:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-mono text-xs uppercase tracking-wider mb-3 shadow-xs">
-            GitHub Live Repository Stream
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-            Dynamic GitHub Work & Open Source
+        <div className="max-w-2xl mb-12 sm:mb-14">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700 mb-3">
+            GitHub
+          </p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+            Live repositories
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-2">
-            Directly aligned with <a href="https://github.com/Mahesh930" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline font-semibold hover:text-blue-800">GitHub (@Mahesh930)</a>. Any newly created repository is automatically categorized by language, architectural depth, and complexity score.
+          <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+            Synced from{' '}
+            <a href="https://github.com/Mahesh930" target="_blank" rel="noopener noreferrer" className="text-sky-700 font-semibold hover:underline">
+              @Mahesh930
+            </a>
+            . New repos are categorized by language and architectural depth.
           </p>
         </div>
 

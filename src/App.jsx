@@ -35,16 +35,16 @@ class ErrorBoundary extends Component {
       return (
         <div className="min-h-screen bg-slate-50 flex items-center justify-center p-8">
           <div className="max-w-md text-center space-y-4">
-            <div className="w-16 h-16 rounded-2xl bg-rose-50 border border-rose-200 flex items-center justify-center mx-auto">
-              <span className="text-2xl">⚠️</span>
+            <div className="w-16 h-16 rounded-2xl bg-rose-50 border border-rose-200 flex items-center justify-center mx-auto text-rose-600 font-bold text-xl">
+              !
             </div>
-            <h1 className="text-2xl font-bold text-slate-900">Something went wrong</h1>
+            <h1 className="text-2xl font-display font-bold text-slate-900">Something went wrong</h1>
             <p className="text-slate-600 text-sm leading-relaxed">
               An unexpected error occurred while rendering the application. Please refresh the page to try again.
             </p>
             <button
               onClick={() => window.location.reload()}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold shadow-sm transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold transition-all"
             >
               Refresh Page
             </button>
@@ -73,7 +73,7 @@ function ScrollToTopFAB() {
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      className="fixed bottom-6 left-6 z-40 w-11 h-11 rounded-xl bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-500/25 flex items-center justify-center hover:-translate-y-1 active:scale-95 transition-all animate-slideUp"
+      className="fixed bottom-6 left-6 z-40 w-11 h-11 rounded-lg bg-slate-900 hover:bg-slate-800 text-white shadow-lg flex items-center justify-center hover:-translate-y-1 active:scale-95 transition-all animate-slideUp"
       aria-label="Scroll to top"
     >
       <ArrowUp className="w-5 h-5" />
@@ -138,11 +138,10 @@ export default function App() {
 
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans selection:bg-blue-100 selection:text-blue-800 overflow-x-hidden">
-        {/* Skip Navigation for Accessibility */}
+      <div className="min-h-screen bg-transparent text-slate-800 flex flex-col font-sans selection:bg-sky-100 selection:text-sky-900 overflow-x-hidden">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-blue-600 focus:text-white focus:text-sm focus:font-semibold focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-slate-900 focus:text-white focus:text-sm focus:font-semibold focus:shadow-lg"
         >
           Skip to main content
         </a>
@@ -155,10 +154,7 @@ export default function App() {
 
         <main id="main-content" className="flex-1">
           {/* Hero Section */}
-          <Hero 
-            onOpenResume={() => setResumeOpen(true)}
-            repoCount={repositories.length || 17}
-          />
+          <Hero onOpenResume={() => setResumeOpen(true)} />
 
           {/* About Section */}
           <About />

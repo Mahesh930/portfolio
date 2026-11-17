@@ -14,15 +14,15 @@ export default function ExperienceEducation() {
   return (
     <section id="experience" className="py-20 relative">
       <div className="max-w-layout mx-auto px-4 sm:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-mono text-xs uppercase tracking-wider mb-3 shadow-xs">
-            Career Background
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-            Experience & Education
+        <div className="max-w-2xl mb-12 sm:mb-14">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700 mb-3">
+            Background
+          </p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+            Experience & education
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-2">
-            Practical industry software engineering experience backed by rigorous academic computer engineering foundation.
+          <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+            Industry internship experience with a strong computer engineering foundation.
           </p>
         </div>
 

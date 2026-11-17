@@ -19,10 +19,11 @@ export default {
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
       },
       maxWidth: {
-        layout: '1560px',
+        layout: '1120px',
       },
       keyframes: {
         modalPop: {
@@ -44,7 +45,15 @@ export default {
         fadeOut: {
           '0%': { opacity: '1', transform: 'translateY(0)' },
           '100%': { opacity: '0', transform: 'translateY(12px)' },
-        }
+        },
+        heroIn: {
+          '0%': { opacity: '0', transform: 'translateY(18px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        heroPhoto: {
+          '0%': { opacity: '0', transform: 'translateY(24px) scale(0.97)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+        },
       },
       animation: {
         modalPop: 'modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards',
@@ -52,6 +61,8 @@ export default {
         slideUp: 'slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         slideDown: 'slideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards',
         fadeOut: 'fadeOut 0.2s ease-in forwards',
+        heroIn: 'heroIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both',
+        heroPhoto: 'heroPhoto 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both',
       }
     },
   },

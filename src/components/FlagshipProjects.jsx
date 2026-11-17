@@ -47,15 +47,15 @@ export default function FlagshipProjects({ projects = [], onOpenProjectModal }) 
   return (
     <section id="flagship" className="py-20 relative">
       <div className="max-w-layout mx-auto px-4 sm:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-mono text-xs uppercase tracking-wider mb-3 shadow-xs">
-            Flagship Engineering
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-            Featured Production & SaaS Projects
+        <div className="max-w-2xl mb-12 sm:mb-14">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700 mb-3">
+            Projects
+          </p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+            Featured work
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-2">
-            Architecturally sophisticated applications built with enterprise multi-tenancy, real-time sync, and distributed design patterns.
+          <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+            Multi-tenant SaaS, real-time marketplaces, and distributed systems built end to end.
           </p>
         </div>
 
@@ -98,7 +98,7 @@ export default function FlagshipProjects({ projects = [], onOpenProjectModal }) 
                     <div className="flex flex-wrap items-center gap-3 pt-3">
                       <button
                         onClick={() => onOpenProjectModal(project)}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-xs sm:text-sm font-semibold shadow-sm shadow-blue-500/25 hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs sm:text-sm font-semibold hover:-translate-y-0.5 active:scale-95 transition-all"
                       >
                         <BookOpen className="w-4 h-4" />
                         <span>Architecture Deep Dive</span>

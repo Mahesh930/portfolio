@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, Linkedin, MapPin, Send, Check } from 'lucide-react';
+import { Mail, Phone, Linkedin, MapPin, Send } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
 export default function Contact({ onShowToast }) {
@@ -53,31 +53,31 @@ export default function Contact({ onShowToast }) {
   };
 
   const getInputClasses = (fieldName) => {
-    const base = "w-full px-4 py-3 rounded-xl bg-white border text-slate-800 text-sm placeholder:text-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 shadow-xs transition-all";
+    const base = "w-full px-4 py-3 rounded-lg bg-white border text-slate-800 text-sm placeholder:text-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-all";
     return errors[fieldName]
       ? `${base} border-rose-400 focus:border-rose-500 focus:ring-rose-500`
       : `${base} border-slate-200`;
   };
 
   const contactMethods = [
-    { label: 'Email Address', value: personal.email, href: `mailto:${personal.email}`, icon: Mail, color: 'text-blue-600' },
-    { label: 'Phone & WhatsApp', value: personal.phone, href: `tel:${personal.phone.replace(/[^0-9+]/g, '')}`, icon: Phone, color: 'text-blue-600' },
-    { label: 'LinkedIn', value: 'in/mahesh-warpe-129605255', href: personal.linkedinUrl, icon: Linkedin, color: 'text-blue-600' },
-    { label: 'Location', value: personal.location, href: null, icon: MapPin, color: 'text-blue-600' },
+    { label: 'Email', value: personal.email, href: `mailto:${personal.email}`, icon: Mail },
+    { label: 'Phone', value: personal.phone, href: `tel:${personal.phone.replace(/[^0-9+]/g, '')}`, icon: Phone },
+    { label: 'LinkedIn', value: 'in/mahesh-warpe-129605255', href: personal.linkedinUrl, icon: Linkedin },
+    { label: 'Location', value: personal.location, href: null, icon: MapPin },
   ];
 
   return (
     <section id="contact" className="py-20 relative">
       <div className="max-w-layout mx-auto px-4 sm:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-block px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 font-mono text-xs uppercase tracking-wider mb-3 shadow-xs">
-            Get In Touch
-          </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
-            Let's Connect & Collaborate
+        <div className="max-w-2xl mb-12 sm:mb-14">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-700 mb-3">
+            Contact
+          </p>
+          <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
+            Let&apos;s work together
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base mt-2">
-            I am actively open to full-time Software Developer, SDE, and Full-Stack Engineering roles. Feel free to reach out directly!
+          <p className="text-slate-600 text-sm sm:text-base mt-3 leading-relaxed">
+            Open to full-time Software Developer, SDE, and Full-Stack roles. Reach out anytime.
           </p>
         </div>
 
@@ -91,8 +91,8 @@ export default function Contact({ onShowToast }) {
                   key={method.label}
                   className="rounded-2xl glass-panel p-5 flex items-center gap-4 card-interactive hover:border-blue-400 group"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-blue-50 border border-blue-200/80 flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform">
-                    <Icon className={`w-5 h-5 ${method.color}`} />
+                  <div className="w-11 h-11 rounded-lg bg-slate-900 text-white flex items-center justify-center shrink-0 group-hover:bg-sky-700 transition-colors">
+                    <Icon className="w-5 h-5" />
                   </div>
                   <div className="overflow-hidden">
                     <span className="text-[11px] font-mono text-slate-500 uppercase tracking-wider block">
@@ -103,7 +103,7 @@ export default function Contact({ onShowToast }) {
                         href={method.href}
                         target={method.href.startsWith('http') ? '_blank' : undefined}
                         rel={method.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        className="text-sm sm:text-base font-semibold text-slate-900 hover:text-blue-600 transition-colors truncate block"
+                        className="text-sm sm:text-base font-semibold text-slate-900 hover:text-sky-700 transition-colors truncate block"
                       >
                         {method.value}
                       </a>
@@ -187,7 +187,7 @@ export default function Contact({ onShowToast }) {
 
               <button
                 type="submit"
-                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-sm font-semibold shadow-sm shadow-blue-500/25 hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all"
+                className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold hover:-translate-y-0.5 active:scale-95 transition-all"
               >
                 <Send className="w-4 h-4" />
                 <span>Send Direct Message</span>

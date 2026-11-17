@@ -9,11 +9,11 @@ import {
   Award, 
   Layers, 
   ArrowRight,
-  Terminal
+  MapPin
 } from 'lucide-react';
 import { PORTFOLIO_DATA } from '../data/portfolioData';
 
-export default function Hero({ onOpenResume, repoCount = 17 }) {
+export default function Hero({ onOpenResume }) {
   const { personal, metrics } = PORTFOLIO_DATA;
 
   const iconMap = {
@@ -24,160 +24,134 @@ export default function Hero({ onOpenResume, repoCount = 17 }) {
   };
 
   return (
-    <header id="hero" className="pt-28 sm:pt-36 pb-16 sm:pb-20 relative">
-      <div className="max-w-layout mx-auto px-4 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Main Hero Content */}
-          <div className="lg:col-span-7 space-y-6">
-            {/* Status Pill */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs sm:text-sm font-medium shadow-xs">
-              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse shadow-xs" />
-              <span>{personal.statusText}</span>
-            </div>
+    <header id="hero" className="relative overflow-hidden">
+      {/* Atmospheric background plane */}
+      <div className="absolute inset-0 -z-10 hero-atmosphere" aria-hidden="true" />
 
-            {/* Title */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15] text-slate-900">
-              Hi, I'm <span className="text-gradient">{personal.name}</span>.<br />
-              <span className="text-slate-800">{personal.role}</span>
-            </h1>
-
-            {/* Subtitle */}
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed max-w-2xl">
-              {personal.headline}
+      <div className="max-w-layout mx-auto px-4 sm:px-8 pt-28 sm:pt-32 pb-10 sm:pb-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center min-h-[min(72vh,720px)]">
+          {/* Copy — brand first */}
+          <div className="lg:col-span-7 space-y-6 animate-heroIn order-2 lg:order-1">
+            <p className="text-sm font-medium tracking-wide text-sky-700 flex items-center gap-2">
+              <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              {personal.statusText}
             </p>
 
-            {/* CTAs — consistent w-full sm:w-auto on all buttons */}
-            <div className="flex flex-wrap items-center gap-3.5 pt-2">
+            <div className="space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                {personal.role}
+              </p>
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-slate-900 leading-[1.05]">
+                {personal.name}
+              </h1>
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl">
+                {personal.headline}
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2 text-sm text-slate-500">
+              <MapPin className="w-4 h-4 text-sky-600 shrink-0" />
+              <span>{personal.location}</span>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-3 pt-1">
               <a
-                href="#github-work"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white text-sm font-semibold shadow-sm shadow-blue-500/25 hover:shadow-md hover:-translate-y-0.5 active:scale-95 transition-all w-full sm:w-auto"
+                href="#flagship"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-sm font-semibold hover:-translate-y-0.5 active:scale-[0.98] transition-all w-full sm:w-auto"
               >
                 <GitBranch className="w-4 h-4" />
-                <span>Explore Live GitHub Work</span>
+                View Projects
               </a>
 
               <button
                 onClick={onOpenResume}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-blue-50 text-slate-700 hover:text-blue-600 border border-slate-300 hover:border-blue-300 text-sm font-semibold hover:-translate-y-0.5 active:scale-95 shadow-xs transition-all w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-white/90 hover:bg-white text-slate-800 border border-slate-200 hover:border-slate-300 text-sm font-semibold hover:-translate-y-0.5 active:scale-[0.98] transition-all w-full sm:w-auto"
               >
                 <FileText className="w-4 h-4" />
-                <span>View Resume</span>
+                View Resume
               </button>
 
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-slate-700 hover:text-blue-600 text-sm font-medium hover:bg-blue-50/70 border border-transparent hover:border-blue-100 transition-all w-full sm:w-auto text-center"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-slate-700 hover:text-sky-700 text-sm font-medium transition-colors w-full sm:w-auto"
               >
-                <span>Get In Touch</span>
+                Get in touch
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
 
-            {/* Social Links */}
-            <div className="flex flex-wrap items-center gap-3 pt-4 border-t border-slate-200">
+            <div className="flex flex-wrap items-center gap-2.5 pt-2">
               <a
                 href={personal.githubUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`GitHub profile: ${personal.githubUsername}`}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-blue-600 text-slate-700 text-xs font-mono shadow-xs hover:-translate-y-0.5 transition-all"
+                aria-label="GitHub"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-white/70 text-xs font-medium transition-all"
               >
-                <Github className="w-3.5 h-3.5 text-blue-600" />
-                <span>github.com/{personal.githubUsername}</span>
+                <Github className="w-4 h-4" />
+                GitHub
               </a>
-
               <a
                 href={personal.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn Profile"
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-blue-600 text-slate-700 text-xs font-mono shadow-xs hover:-translate-y-0.5 transition-all"
+                aria-label="LinkedIn"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-white/70 text-xs font-medium transition-all"
               >
-                <Linkedin className="w-3.5 h-3.5 text-blue-600" />
-                <span>LinkedIn Profile</span>
+                <Linkedin className="w-4 h-4" />
+                LinkedIn
               </a>
-
               <a
                 href={`mailto:${personal.email}`}
-                aria-label={`Email: ${personal.email}`}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:border-blue-400 hover:text-blue-600 text-slate-700 text-xs font-mono shadow-xs hover:-translate-y-0.5 transition-all"
+                aria-label="Email"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-white/70 text-xs font-medium transition-all"
               >
-                <Mail className="w-3.5 h-3.5 text-blue-600" />
-                <span>{personal.email}</span>
+                <Mail className="w-4 h-4" />
+                Email
               </a>
             </div>
           </div>
 
-          {/* Cyber Terminal Card */}
-          <div className="lg:col-span-5">
-            <div className="rounded-2xl border border-slate-800 bg-[#0d121f] shadow-xl overflow-hidden card-interactive group">
-              <div className="flex items-center justify-between px-4 py-3 bg-white/[0.05] border-b border-white/10">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-rose-500/90" />
-                  <div className="w-3 h-3 rounded-full bg-amber-500/90" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-500/90" />
-                </div>
-                <div className="flex items-center gap-1.5 text-slate-400 text-xs font-mono">
-                  <Terminal className="w-3.5 h-3.5 text-blue-400" />
-                  <span>mahesh@developer:~$</span>
-                </div>
-              </div>
-
-              <div className="p-4 sm:p-5 font-mono text-xs sm:text-sm leading-relaxed space-y-3">
-                <div>
-                  <span className="text-emerald-400">$ </span>
-                  <span className="text-slate-100">curl -s api.github.com/users/{personal.githubUsername}</span>
-                </div>
-
-                <div className="pl-3 border-l-2 border-blue-500/40 text-slate-300 space-y-1 text-xs">
-                  <p className="text-slate-400">&#123;</p>
-                  <p className="pl-3"><span className="text-sky-300">"engineer"</span>: <span className="text-amber-300">"{personal.name}"</span>,</p>
-                  <p className="pl-3"><span className="text-sky-300">"role"</span>: <span className="text-amber-300">"{personal.role}"</span>,</p>
-                  <p className="pl-3"><span className="text-sky-300">"location"</span>: <span className="text-amber-300">"{personal.location}"</span>,</p>
-                  <p className="pl-3"><span className="text-sky-300">"coreStack"</span>: [</p>
-                  <p className="pl-6 text-blue-300">"Java 17", "Spring Boot 3", "Next.js", "MERN", "PostgreSQL", "Socket.io"</p>
-                  <p className="pl-3">],</p>
-                  <p className="pl-3"><span className="text-sky-300">"publicRepos"</span>: <span className="text-emerald-400">{repoCount}</span>,</p>
-                  <p className="pl-3"><span className="text-sky-300">"problemSolving"</span>: <span className="text-amber-300">"5-Star HackerRank • 400+ Solved"</span></p>
-                  <p className="text-slate-400">&#125;</p>
-                </div>
-
-                <div className="pt-1">
-                  <span className="text-emerald-400">$ </span>
-                  <span className="text-slate-100">git status --live-sync</span>
-                  <span className="terminal-cursor" aria-hidden="true" />
-                  <p className="text-emerald-400 text-xs mt-1">✔ Auto-discovers every newly pushed repository in real-time.</p>
-                </div>
+          {/* Profile photo — dominant visual */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end order-1 lg:order-2 animate-heroPhoto">
+            <div className="relative">
+              <div className="absolute -inset-6 sm:-inset-8 rounded-[2rem] bg-gradient-to-br from-sky-200/40 via-transparent to-slate-300/30 blur-2xl" aria-hidden="true" />
+              <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-[1.75rem] overflow-hidden border border-white/80 shadow-[0_25px_50px_-12px_rgba(15,23,42,0.25)] ring-1 ring-slate-900/5">
+                <img
+                  src={personal.avatarUrl}
+                  alt={`${personal.name} — profile photo`}
+                  width={320}
+                  height={320}
+                  className="w-full h-full object-cover object-top scale-105"
+                  fetchPriority="high"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/25 via-transparent to-transparent pointer-events-none" />
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Metrics Counter Strip */}
-        <div className="mt-12 sm:mt-16 p-4 sm:p-6 rounded-2xl glass-panel grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {metrics.map((metric, i) => {
-            const Icon = iconMap[metric.icon] || Code2;
-            const isLast = i === metrics.length - 1;
-            return (
-              <div 
-                key={metric.label}
-                className={`flex items-center gap-4 px-3 py-2 rounded-xl transition-all duration-300 hover:bg-blue-50/50 hover:scale-[1.02] cursor-default ${
-                  !isLast ? 'lg:border-r lg:border-slate-200' : ''
-                }`}
-              >
-                <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200/80 flex items-center justify-center text-blue-600 shrink-0 shadow-xs transition-transform duration-300 hover:rotate-3">
-                  <Icon className="w-6 h-6" />
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                    {metric.value}
+      {/* Metrics — below hero fold */}
+      <div className="border-t border-slate-200/80 bg-white/40 backdrop-blur-sm">
+        <div className="max-w-layout mx-auto px-4 sm:px-8 py-8 sm:py-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {metrics.map((metric) => {
+              const Icon = iconMap[metric.icon] || Code2;
+              return (
+                <div key={metric.label} className="flex items-start gap-3.5 group">
+                  <div className="w-10 h-10 rounded-lg bg-slate-900 text-white flex items-center justify-center shrink-0 group-hover:bg-sky-700 transition-colors">
+                    <Icon className="w-5 h-5" />
                   </div>
-                  <div className="text-xs font-semibold text-slate-800">{metric.label}</div>
-                  <div className="text-[11px] text-slate-500 font-mono">{metric.subtext}</div>
+                  <div>
+                    <div className="text-2xl font-bold text-slate-900 tracking-tight">{metric.value}</div>
+                    <div className="text-xs font-semibold text-slate-800">{metric.label}</div>
+                    <div className="text-[11px] text-slate-500">{metric.subtext}</div>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     </header>
